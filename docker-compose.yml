@@ -18,9 +18,10 @@ services:
     container_name: waproject-database-alex-api
     image: postgres:11.5-alpine
     environment:
-      - POSTGRES_DB=waprojectAlexApi
+      - POSTGRES_DB=waproject
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=123mudar
+      - PGDATA=/tmp
     volumes:
       - ./.data/postgresql:/var/lib/postgresql/data
     ports:
